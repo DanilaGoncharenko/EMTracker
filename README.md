@@ -25,14 +25,14 @@ It combines YOLO-based detections, a custom Soft-Attention Re-Identification (Re
 ├── scripts/               # Execution and benchmark scripts
 ├── weights/               # Store your YOLO .pt files here
 └── README.md
-'''
+```
 ## 🚀 Installation
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/DanilaGoncharenko/EMTracker.git
    cd EMTracker
-   '''
+   ```
 2. Download the weights for YOLO: https://clck.ru/3TEAWh
    put them in folder weights. 
       
@@ -42,4 +42,4 @@ It combines YOLO-based detections, a custom Soft-Attention Re-Identification (Re
  ```bash
    export PYTHONPATH=$PYTHONPATH:$(pwd)
    python scripts/run_benchmark.py
-'''
+```
