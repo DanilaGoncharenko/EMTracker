@@ -1,5 +1,7 @@
 # EMTracker: Enhanced Multi-Object Tracker with Soft Attention & Interpolation
 Link to all files https://clck.ru/3TEBUx
+
+
 **EMTracker** is a robust, hybrid Multi-Object Tracking (MOT) system designed for complex, dynamic environments with severe occlusions (e.g., racing, rally, heavy dust, or crowded scenes). 
 
 It combines YOLO-based detections, a custom Soft-Attention Re-Identification (Re-ID) module, and bidirectional interpolation to maintain track IDs even when objects disappear for extended periods.
