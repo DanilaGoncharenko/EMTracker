@@ -24,7 +24,7 @@ It combines YOLO-based detections, a custom Soft-Attention Re-Identification (Re
 ```Plaintext
 ├── data/                  # Place your videos and Ground Truth here
 |      ├── gt/             # Place Ground Truth here
-|       └── TestData/       # Placr Videos here
+|      └── TestData/       # Place Videos here
 ├── src/                   # Core tracker modules (ReID, Tracker, Metrics)
 ├── scripts/               # Execution and benchmark scripts
 ├── weights/               # Store your YOLO.pt files here
