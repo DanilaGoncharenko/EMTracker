@@ -18,9 +18,27 @@ It combines YOLO-based detections, a custom Soft-Attention Re-Identification (Re
 3. **Tracking (RobustMasterTracker):** Hungarian algorithm assigns detections to existing tracks based on similarity thresholds and distance penalties. Unmatched detections spawn new tracks.
 4. **Post-Processing (InterpolativeTracker):** The history of all tracks is analyzed, and missing spatial coordinates between known states are mathematically filled.
 
+## 📂 Repository Structure
+```Plaintext
+├── data/                  # Place your videos and Ground Truth here
+├── src/                   # Core tracker modules (ReID, Tracker, Metrics)
+├── scripts/               # Execution and benchmark scripts
+├── weights/               # Store your YOLO .pt files here
+└── README.md
+
 ## 🚀 Installation
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/EMTracker.git](https://github.com/yourusername/EMTracker.git)
+   git clone https://github.com/DanilaGoncharenko/EMTracker.git
    cd EMTracker
+
+2. Download the weights for YOLO: https://clck.ru/3TEAWh
+   put them in folder weights. 
+      
+
+## 🏃 Start
+Для запуска обработки видео и получения метрик выполните скрипт из корня проекта:
+ ```bash
+   export PYTHONPATH=$PYTHONPATH:$(pwd)
+   python scripts/run_benchmark.py
