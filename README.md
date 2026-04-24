@@ -42,7 +42,7 @@ It combines YOLO-based detections, a custom Soft-Attention Re-Identification (Re
       
 
 ## 🏃 Start
-Для запуска обработки видео и получения метрик выполните скрипт из корня проекта:
+To run the tracker:
  ```bash
    python scripts/run_benchmark.py
 ```
