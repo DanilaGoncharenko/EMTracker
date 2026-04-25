@@ -1,4 +1,4 @@
-# EMTracker: Enhanced Multi-Object Tracker with Soft Attention & Interpolation 
+# EmeddingMemmoryTracker: Enhanced Multi-Object Tracker with Soft Attention & Interpolation 
 ## By: Danila Goncharenko, ITMO University
 Link to all files https://clck.ru/3TEBUx
 
