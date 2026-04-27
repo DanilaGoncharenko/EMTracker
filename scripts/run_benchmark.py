@@ -8,13 +8,11 @@ from ultralytics import YOLO
 import warnings
 import torch
 
-# Добавляем корень проекта в путь для корректных импортов из папок models и utils
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-# ПРАВИЛЬНЫЕ ИМПОРТЫ (согласно твоей новой структуре)
 from src.reid import SoftAttentionReIDExtractor
 from src.tracker import InterpolativeTracker
 from src.metrics import HOTACalculator
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 warnings.filterwarnings("ignore")
 if not hasattr(np, 'asfarray'):
@@ -33,7 +31,6 @@ def run_interpolated_benchmark(cfg):
     # ПРОВЕРКА CUDA: если в конфиге cuda, но она недоступна — переключаемся на cpu
     device = detect_cfg['device']
     if device == 'cuda' and not torch.cuda.is_available():
-        print("⚠️ Warning: CUDA requested but not available. Switching to CPU.")
         device = 'cpu'
 
     # Инициализация моделей
@@ -49,11 +46,7 @@ def run_interpolated_benchmark(cfg):
     hota_calc = HOTACalculator()
     
     cap = cv2.VideoCapture(paths['video_source'])
-    if not cap.isOpened():
-        print(f"❌ Error: Could not open video {paths['video_source']}")
-        return
-
-    frames_cache = []
+   frames_cache = []
     f_idx = 1
     
    
