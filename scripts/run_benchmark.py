@@ -56,7 +56,7 @@ def run_interpolated_benchmark(cfg):
     frames_cache = []
     f_idx = 1
     
-    print(">>> Stage 1: Forward Pass (Scanning video)...")
+   
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret: break
@@ -74,10 +74,9 @@ def run_interpolated_benchmark(cfg):
         f_idx += 1
     cap.release()
 
-    print(">>> Stage 2: Bi-directional Interpolation...")
+
     interpolated_history = my_tracker.get_interpolated_history(max_gap=cfg['interpolation']['max_gap'])
 
-    print(">>> Stage 3: Metrics & Visualization...")
     acc = mm.MOTAccumulator(auto_id=True)
     gt_db = mm.io.loadtxt(paths['gt_path'], fmt="mot15-2D", min_confidence=1)
     
