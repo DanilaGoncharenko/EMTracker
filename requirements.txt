@@ -1,9 +1,0 @@
-torch>=2.0.0
-torchvision>=0.15.0
-ultralytics>=8.0.0
-opencv-python>=4.7.0.72
-numpy>=1.23.0
-motmetrics>=1.4.0
-scipy>=1.10.0
-pandas>=1.5.0
-pyyaml
